@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACSI - AS6</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+ /* file saved to local directory */
+    @import url("gh-fork-ribbon.css");
+    /* alternatively fetch from cdnjs */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css");
+
+
+
+    @import url("http://yui.yahooapis.com/pure/0.6.0/pure-min.css");
+    
+      .smaller-font { font-size:14px } 
+    
+
+
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      div.my-header {
+        background-color: #000000;
+        /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#606550), color-stop(0%,#409494), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#b3fbb3), color-stop(100%,#008c2e));*/
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 22px;
+        width: 100%;
+        text-align: left;
+      }
+      div.my-header span{
+        color: white;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 16px;
+
+      }
+      div.my-footer {
+        /*border-top: 1px solid #ccc;*/
+        font-size: 8pt;
+        text-align: left;
+        position: fixed;
+        bottom: 0px;
+        left: 10px;
+        /*height: 30px;*/
+        /*width: 100%;*/
+      }
+
+      div.my-footer p {
+      /*    margin-top: 10px;
+          height: 30px;*/
+          margin-bottom: 0px;
+      }
+      div.my-footer img {
+        vertical-align:middle;
+      }
+
+      img.alt {
+        width: 100px;
+      }
+
+      .cols {
+        display: flex;
+      }
+      
+      .fifty {
+        flex: 50%;
+        margin-left: 10px
+      }
+
+      .work{
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        margin-right: -5px;
+      }
+
+          span.red {
+        color: hsl(355deg 98% 40%);
+        right: -25%;
+        position: relative;
+      }
+
+         #myline {
+          margin-bottom: -50px;
+          width: 6px;
+          height: 2px;
+          background: red;
+          position: relative;
+          animation: mymove 5s infinite;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes mymove {
+          from {left: 310px;}
+          to {left: 0px;}
+
+            0%   {opacity: 1;}
+            50%  {opacity: 0.7;}
+            70%  {opacity: 0.5;}
+            90%  {opacity: 0.2;}
+            100% {opacity: 0;}
+        }
+        }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+
+            .pure-table {
+       border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show;
+          border: 0px solid #cbcbcb;
+      }
+    </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+ <div class="my-header">
+
+    <svg height="15" width="18" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; margin-left:4px;" role="img"><title>Sesiones prácticas</title>
+    <span>Sexta Sesión</span>
+
+ 
+    <a href="mailto:isaac.lera@uib.es" style="float: right; margin-right: 10px;">
+    <svg class="svg-icon" viewBox="0 0 20 20" height="18" width="20" style="fill: #ffffff;" alt="Email me" >
+              <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
+            </svg>
+     </a>       
+
+    <a href="https://github.com/wisaaco/GEIN-ACSI-SA" style="float: right; margin-right: 5px;">
+        <svg height="15" width="15" style="fill: #ffffff;" alt="Github" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+    </a>
+ </div>
+ <div class="my-footer">
+    <p> 2021 - Isaac Lera - CC BY license </p>
+ </div>
+
+---
+class: center, middle
+
+### ACSI
+# Sexta sesión práctica 
+
+### por Isaac Lera 
+---
+
+# Caracterización de la carga
+
+## Normalización
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 1. 
+
+Normaliza la series siguientes:
+
+```python
+A = [14, 12, 18, 20, 54, 10]
+
+B = [870, 2, 8, 0, 4, 1000]
+
+```
+
+- Por Z-Score,
+
+- Por Rango (min: 0, max: 400)
+
+- Por logarítmo
+
+---
+
+## Actividad 2. 
+
+Realizar el clúster mediante K-means (método Mínimum Spanning Tree, MST) y dibuja el dendrograma asociado:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Elemento    |     Atributo 1    |     Atributo 2    |
+|-----------------|-------------------|-------------------|
+|     A           |     1             |     1             |
+|     B           |     2             |     1             |
+|     C           |     4             |     3             |
+|     D           |     5             |     4             |
+]
+
+---
+
+## Actividad 3.
+
+Realizar el clúster mediante K-means (método Mínimum Spanning Tree, MST) y dibuja el dendrograma asociado:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Individuo    |     Altura    |     Peso    |     Enfermedad    |     Presión    |
+|------------------|---------------|-------------|-------------------|----------------|
+|     A            |     180       |     90      |     Sí            |     1290       |
+|     B            |     164       |     80      |     No            |     3290       |
+|     C            |     156       |     85      |     No            |     1200       |
+|     D            |     172       |     70      |     No            |     2200       |
+]
+
+---
+
+## Actividad 4. 
+
+Se ha realizado una encuesta entre los suscriptores de una web y se ha obtenido la tabla siguiente. El 1 indica que el usuario juega a dicho juego y el 0, no. 
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     USER |     DOOM |     QUAKE |     HERETIC |
+|----------|----------|-----------|-------------|
+|     A    | 1        | 1         | 1           |
+|     B    | 0        | 1         | 1           |
+|     C    | 0        | 1         | 1           |
+|     D    | 1        | 0         | 0           |
+| E        | 1        | 0         | 0           |
+]
+
+- Realiza el agrupamiento/clúster con k-means hasta obtener un único grupo 
+- Dibuja el dendrograma resultante 
+- ¿Qué interpretación haces de estos centroides?
+
+
+
+---
+
+background-color: #eeeeee
+class: center, middle
+
+# - Fin de la sexta sesión  -
+
+
+<div id="myline"></div>
+<a href="SA7.html">
+<svg id="move" class="svg-icon" viewBox="0 0 24 24" height="100" width="100" alt="Siguiente Tema">
+    <circle fill="#aaaaaa" cx="3.274" cy="6.198" r="0.585"></circle>
+    <rect x="6.198" y="4.736" fill="#aaaaaa" width="0.585" height="2.34"></rect>
+    <path fill="#aaaaaa" d="M15.849,11.669v-1.064l-1.072-0.715l-0.829,1.659c-0.428,0.174-0.73,0.592-0.73,1.083c0,0.265,0.091,0.507,0.24,0.703l-0.201,2.806h1.759l0.191-2.676c0.216-0.212,0.35-0.507,0.35-0.833c0-0.102-0.017-0.2-0.042-0.294L15.849,11.669z M14.387,13.217c-0.322,0-0.585-0.262-0.585-0.585c0-0.322,0.262-0.585,0.585-0.585c0.322,0,0.585,0.262,0.585,0.585C14.971,12.954,14.709,13.217,14.387,13.217z"></path>
+    <polygon fill="#aaaaaa" points="15.721,7.368 19.066,7.368 19.066,3.859 16.141,2.894 15.556,2.104 11.462,2.104 10.877,2.894 8.538,3.859 8.538,7.368 11.297,7.368  "></polygon>
+    <path fill="#aaaaaa" d="M5.029,7.368h0.585V4.444h-2.34l-1.755,1.17v0.877H0.496c-0.081,0-0.146,0.065-0.146,0.146s0.065,0.146,0.146,0.146h1.024v0.585H0.642C0.48,7.368,0.35,7.499,0.35,7.66S0.48,7.953,0.642,7.953h3.802L5.029,7.368zM3.274,7.076c-0.485,0-0.877-0.393-0.877-0.877s0.393-0.877,0.877-0.877s0.877,0.393,0.877,0.877S3.758,7.076,3.274,7.076z"></path>
+    <path fill="#aaaaaa" d="M18.96,16.141l-0.631-2.944c0.094-0.168,0.151-0.359,0.151-0.565c0-0.295-0.113-0.561-0.292-0.766v-1.427l0.71-2.486H9.708c-0.646,0-1.17,0.524-1.17,1.17c0,0.162,0.033,0.317,0.093,0.457l-0.682,2.047c-0.346,0.203-0.58,0.575-0.58,1.005c0,0.152,0.031,0.297,0.084,0.431l-1.099,3.079h1.863l0.407-1.141l1.504,0.725l0.761-1.581l-1.51-0.711c0.201-0.209,0.33-0.488,0.33-0.801c0-0.162-0.033-0.316-0.093-0.457l0.556-1.668l1.73-1.384h2.778l1.755,1.17v1.48v0.093c-0.18,0.206-0.292,0.472-0.292,0.766c0,0.392,0.195,0.738,0.492,0.95l0.536,2.559H18.96z M8.538,13.217c-0.322,0-0.585-0.262-0.585-0.585c0-0.322,0.262-0.585,0.585-0.585c0.322,0,0.585,0.262,0.585,0.585C9.123,12.954,8.86,13.217,8.538,13.217z M9.708,9.708c-0.322,0-0.585-0.262-0.585-0.585c0-0.322,0.262-0.585,0.585-0.585c0.322,0,0.585,0.262,0.585,0.585C10.292,9.445,10.03,9.708,9.708,9.708z M17.311,8.538c0.322,0,0.585,0.262,0.585,0.585c0,0.322-0.262,0.585-0.585,0.585s-0.585-0.262-0.585-0.585C16.726,8.8,16.988,8.538,17.311,8.538z M16.726,12.632c0-0.322,0.262-0.585,0.585-0.585s0.585,0.262,0.585,0.585c0,0.322-0.262,0.585-0.585,0.585S16.726,12.954,16.726,12.632z"></path>
+    <rect x="7.368" y="4.736" fill="#aaaaaa" width="0.585" height="2.34"></rect>
+    <polygon fill="#aaaaaa" points="11.89,14.086 11.468,14.288 10.517,16.265 10.622,16.721 11.413,17.101 12.68,14.466  "></polygon>
+    <polygon fill="#aaaaaa" points="19.285,16.726 17.092,16.726 16.726,17.019 16.726,17.896 19.65,17.896 19.65,17.019  "></polygon>
+    <polygon fill="#aaaaaa" points="12.997,16.726 12.632,17.019 12.632,17.896 15.556,17.896 15.556,17.019 15.191,16.726  "></polygon>
+    <polygon fill="#aaaaaa" points="5.979,16.726 5.613,17.019 5.613,17.896 8.538,17.896 8.538,17.019 8.172,16.726  "></polygon>
+    <path fill="#aaaaaa" d="M5.933,13.752l0.558,0.263l0.344-0.963c-0.035-0.138-0.052-0.278-0.052-0.419c0-0.536,0.253-1.044,0.672-1.375l0.634-1.903l-2.461,2.109c-0.005,0-0.01-0.002-0.015-0.002c-0.646,0-1.17,0.524-1.17,1.17c0,0.646,0.524,1.17,1.17,1.17C5.725,13.802,5.831,13.781,5.933,13.752z M5.029,12.632c0-0.322,0.262-0.585,0.585-0.585s0.585,0.262,0.585,0.585c0,0.322-0.262,0.585-0.585,0.585S5.029,12.954,5.029,12.632z"></path>
+  </svg>
+</a>
+
+    </textarea>
+    
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+
+    <!-- option: katex -->
+    <script src="https://unpkg.com/katex/dist/katex.min.js"></script>
+    <script src="https://unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/katex/dist/katex.min.css" />
+
+    <script>
+    const slideshow = remark.create({
+      highlightStyle: "github", // highlight.js theme
+    }, () => {
+      // KaTeX sessting
+      renderMathInElement(document.body, {delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+      ]});
+    });
+    </script>
+
+
+
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

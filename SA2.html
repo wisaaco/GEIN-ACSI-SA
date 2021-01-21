@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+    <title>ACSI - AS2</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+ /* file saved to local directory */
+    @import url("gh-fork-ribbon.css");
+    /* alternatively fetch from cdnjs */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css");
+
+
+
+    @import url("http://yui.yahooapis.com/pure/0.6.0/pure-min.css");
+    
+      .smaller-font { font-size:20px } 
+    
+
+
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      div.my-header {
+        background-color: #000000;
+        /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#606550), color-stop(0%,#409494), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#b3fbb3), color-stop(100%,#008c2e));*/
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 22px;
+        width: 100%;
+        text-align: left;
+      }
+      div.my-header span{
+        color: white;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 16px;
+
+      }
+      div.my-footer {
+        /*border-top: 1px solid #ccc;*/
+        font-size: 8pt;
+        text-align: left;
+        position: fixed;
+        bottom: 0px;
+        left: 10px;
+        /*height: 30px;*/
+        /*width: 100%;*/
+      }
+
+      div.my-footer p {
+      /*    margin-top: 10px;
+          height: 30px;*/
+          margin-bottom: 0px;
+      }
+      div.my-footer img {
+        vertical-align:middle;
+      }
+
+      img.alt {
+        width: 100px;
+      }
+
+      .cols {
+        display: flex;
+      }
+      
+      .fifty {
+        flex: 50%;
+        margin-left: 10px
+      }
+
+      .work{
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        margin-right: -5px;
+      }
+
+      #colorani path{
+        animation: mycolor 4s;
+        /*animation-iteration-count: infinite;*/
+      }
+        @keyframes mycolor {
+          0% { fill:#ffff4d; }
+          10% { fill:#e6e600; }
+          20% { fill:#cccc00; }
+          30% { fill:#b3b300; }
+          40% { fill:#999900; }
+          50% { fill:#808000; }
+          60% { fill:#666600; }
+          70% { fill:#4d4d00; }
+          80% { fill:#333300; }
+          90% { fill:#1a1a00; }
+          100% { fill:#000000; }
+        }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .pure-table {
+       border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show;
+          border: 0px solid #cbcbcb;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+ <div class="my-header">
+
+    <svg height="15" width="18" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; margin-left:4px;" role="img"><title>Sesiones prácticas</title>
+    <span>Segunda Sesión</span>
+
+ 
+    <a href="mailto:isaac.lera@uib.es" style="float: right; margin-right: 10px;">
+    <svg class="svg-icon" viewBox="0 0 20 20" height="18" width="20" style="fill: #ffffff;" alt="Email me" >
+              <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
+            </svg>
+     </a>       
+
+    <a href="https://github.com/wisaaco/GEIN-ACSI-SA" style="float: right; margin-right: 5px;">
+        <svg height="15" width="15" style="fill: #ffffff;" alt="Github" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+    </a>
+ </div>
+ <div class="my-footer">
+    <p> 2021 - Isaac Lera - CC BY license </p>
+ </div>
+
+---
+class: center, middle
+
+### ACSI
+# Segunda sesión práctica 
+
+### por Isaac Lera 
+---
+
+# Monitorización 
+
+**¿Cuándo observamos alteramos?** Quién sabe: [física cuántica](https://www.investigacionyciencia.es/blogs/fisica-y-quimica/85/posts/no-la-fsica-cuntica-no-dice-eso-15264) fuera dudas!
+
+En TIC, la observación requiere un esfuerzo por quién la realiza y es una **sobrecarga** si la realiza el propio sistema.
+
+$$ Overhead = \frac{Tiempo\ de\ ejecución\ del\ monitor}{Intervalo\ de\ medida} $$
+
+Ejemplo: 
+
+*Si cada 10 minutos se ejecuta un monitor que requiere 30s. El overhead es (30/60)/10 = 0.05 = 5%*
+
+---
+
+
+
+---
+
+background-color: #eeeeee
+class: center, middle
+
+# - Fin de la segunda sesión  -
+
+
+
+<a href="SA3.pdf">
+<svg id="move" class="svg-icon" viewBox="0 0 20 20" height="35" width="35" alt="Siguiente Tema">
+  <path fill="#aaaaaa" d="M5.92,11.7c-0.091,0-0.178-0.013-0.265-0.027l-2.433,6.487h5.395l-2.433-6.487C6.097,11.687,6.01,11.7,5.92,11.7z"></path>
+            <path fill="#aaaaaa" d="M4.254,10.34H0.479l2.11,7.573l2.429-6.477C4.631,11.193,4.348,10.803,4.254,10.34z"></path>
+            <path fill="#aaaaaa" d="M7.585,10.34c-0.094,0.463-0.378,0.853-0.764,1.096l2.429,6.477l2.019-7.573H7.585z"></path>
+            <path fill="#aaaaaa" d="M5.018,8.564L2.589,2.087L0.479,9.66h3.775C4.348,9.197,4.631,8.807,5.018,8.564z"></path>
+            <path fill="#aaaaaa" d="M5.92,8.3c0.091,0,0.178,0.013,0.265,0.027l2.433-6.487H3.222l2.433,6.487C5.742,8.313,5.829,8.3,5.92,8.3z"></path>
+            <path fill="#aaaaaa" d="M7.585,9.66h3.684L9.25,2.087L6.821,8.564C7.208,8.807,7.491,9.197,7.585,9.66z"></path>
+            <circle fill="#aaaaaa" cx="5.92" cy="10" r="0.68"></circle>
+            <path fill="#aaaaaa" d="M11.763,8.872L12.064,10l-0.301,1.128c0.184,0.101,0.392,0.164,0.617,0.164c0.712,0,1.292-0.58,1.292-1.292s-0.58-1.292-1.292-1.292C12.156,8.708,11.947,8.771,11.763,8.872z"></path>
+            <path fill="#aaaaaa" d="M12.55,8.368c0,0.007-0.006,0.01-0.007,0.017c0.327,0.033,0.623,0.16,0.864,0.357c0.004-0.005,0.002-0.011,0.007-0.016l0.637-0.637c-0.408-0.357-0.927-0.583-1.501-0.622V8.368z"></path>
+            <path fill="#aaaaaa" d="M11.438,7.652l0.236,0.887c0.168-0.08,0.35-0.135,0.543-0.155c-0.001-0.006-0.007-0.01-0.007-0.017V7.467C11.938,7.485,11.681,7.555,11.438,7.652z"></path>
+            <path fill="#aaaaaa" d="M12.21,12.533v-0.901c0-0.007,0.006-0.01,0.007-0.017c-0.193-0.019-0.375-0.075-0.543-0.155l-0.236,0.887C11.681,12.445,11.938,12.515,12.21,12.533z"></path>
+            <path fill="#aaaaaa" d="M14.913,10.17h-0.901c-0.007,0-0.01-0.006-0.017-0.007c-0.033,0.327-0.16,0.623-0.357,0.864c0.005,0.004,0.011,0.002,0.016,0.007l0.637,0.637C14.649,11.263,14.875,10.744,14.913,10.17z"></path>
+            <path fill="#aaaaaa" d="M14.291,8.329l-0.637,0.637c-0.004,0.004-0.011,0.003-0.016,0.007c0.197,0.241,0.324,0.537,0.357,0.864c0.006-0.001,0.01-0.007,0.017-0.007h0.901C14.875,9.256,14.649,8.737,14.291,8.329z"></path>
+            <path fill="#aaaaaa" d="M14.051,11.911l-0.637-0.637c-0.004-0.004-0.003-0.011-0.007-0.016c-0.241,0.197-0.537,0.324-0.864,0.357c0.001,0.006,0.007,0.01,0.007,0.017v0.901C13.124,12.494,13.643,12.268,14.051,11.911z"></path>
+            <path fill="#aaaaaa" d="M17.345,1.839h-6.529L10.352,3.58l0.624,2.34h1.064c2.285,0,4.08,1.882,4.08,4.08v0c0,2.254-1.827,4.08-4.08,4.08h-1.064l-0.624,2.34l0.464,1.741h6.529L19.521,10L17.345,1.839z"></path>
+  </svg>
+</a>
+
+
+    </textarea>
+    
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+
+    <!-- option: katex -->
+    <script src="https://unpkg.com/katex/dist/katex.min.js"></script>
+    <script src="https://unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/katex/dist/katex.min.css" />
+
+    <script>
+    const slideshow = remark.create({
+      highlightStyle: "github", // highlight.js theme
+    }, () => {
+      // KaTeX sessting
+      renderMathInElement(document.body, {delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+      ]});
+    });
+    </script>
+
+
+
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

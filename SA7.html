@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACSI - AS7</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+ /* file saved to local directory */
+    @import url("gh-fork-ribbon.css");
+    /* alternatively fetch from cdnjs */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css");
+
+
+
+    @import url("http://yui.yahooapis.com/pure/0.6.0/pure-min.css");
+    
+      .smaller-font { font-size:14px } 
+    
+
+
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      div.my-header {
+        background-color: #000000;
+        /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#606550), color-stop(0%,#409494), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#b3fbb3), color-stop(100%,#008c2e));*/
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 22px;
+        width: 100%;
+        text-align: left;
+      }
+      div.my-header span{
+        color: white;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 16px;
+
+      }
+      div.my-footer {
+        /*border-top: 1px solid #ccc;*/
+        font-size: 8pt;
+        text-align: left;
+        position: fixed;
+        bottom: 0px;
+        left: 10px;
+        /*height: 30px;*/
+        /*width: 100%;*/
+      }
+
+      div.my-footer p {
+      /*    margin-top: 10px;
+          height: 30px;*/
+          margin-bottom: 0px;
+      }
+      div.my-footer img {
+        vertical-align:middle;
+      }
+
+      img.alt {
+        width: 100px;
+      }
+
+      .cols {
+        display: flex;
+      }
+      
+      .fifty {
+        flex: 50%;
+        margin-left: 10px
+      }
+
+      .work{
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        margin-right: -5px;
+      }
+
+          span.red {
+        color: hsl(355deg 98% 40%);
+        right: -25%;
+        position: relative;
+      }
+
+     @keyframes mycolor {
+          0% { fill:#ffff4d; }
+          10% { fill:#e6e600; }
+          20% { fill:#cccc00; }
+          30% { fill:#b3b300; }
+          40% { fill:#999900; }
+          50% { fill:#808000; }
+          60% { fill:#666600; }
+          70% { fill:#4d4d00; }
+          80% { fill:#333300; }
+          90% { fill:#1a1a00; }
+          100% { fill:#000000; }
+        }
+
+
+
+        a:before,
+        a:after, #face {
+          animation: glow-grow 8s ease-out;
+        }
+
+        @keyframes glow-grow {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          80% {
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1.);
+            opacity: 1;
+          }
+        }
+
+          .var {
+                font-family: 'Dosis';
+                font-weight: normal;
+          }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+
+            .pure-table {
+       border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show;
+          border: 0px solid #cbcbcb;
+      }
+    </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+ <div class="my-header">
+
+    <svg height="15" width="18" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; margin-left:4px;" role="img"><title>Sesiones prácticas</title>
+    <span>Séptima Sesión</span>
+
+ 
+    <a href="mailto:isaac.lera@uib.es" style="float: right; margin-right: 10px;">
+    <svg class="svg-icon" viewBox="0 0 20 20" height="18" width="20" style="fill: #ffffff;" alt="Email me" >
+              <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
+            </svg>
+     </a>       
+
+    <a href="https://github.com/wisaaco/GEIN-ACSI-SA" style="float: right; margin-right: 5px;">
+        <svg height="15" width="15" style="fill: #ffffff;" alt="Github" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+    </a>
+ </div>
+ <div class="my-footer">
+    <p> 2021 - Isaac Lera - CC BY license </p>
+ </div>
+
+---
+class: center, middle
+
+### ACSI
+# Séptima sesión práctica 
+
+### por Isaac Lera 
+---
+
+# Planificación de la capacidad
+
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 1. 
+
+Una compañía de telefonía monitoriza el número de peticiones de los últimos meses. Quiere estimar cuál será el valor esperado de peticiones en el siguiente mes usando las tres técnicas que se mencionan:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|                   |     Número peticiones (Millones)    |
+|-------------------|-------------------------------------|
+|     Julio         |     220                             |
+|     Agosto        |     240                             |
+|     Septiembre    |     239                             |
+|     Octubre       |     209                             |
+|     Noviembre     |     190                             |
+|     Diciembre     |     160                             |
+]
+
+-  Medias móviles, usando los 4 últimos valores.
+-  Suavizado exponencial con α=0.9
+-  Regresión lineal
+
+
+---
+
+## Actividad 2. 
+
+Una empresa de almacenamiento en la nube consta de los siguientes racks de servidores.
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Racks    |     Demanda (ms)    |
+|--------------|---------------------|
+|     X        |     0.09            |
+|     Y        |     0.16            |
+|     Z        |     0.1             |
+|     H        |     0.05            |
+]
+
+A lo largo de estos últimos trimestres han recibido la siguiente cantidad de peticiones por ms que distribuían equitativamente entre los racks.
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Trimestre    |     Número peticiones (pet./ms)    |
+|------------------|------------------------------------|
+|     01-03        |     20                             |
+|     04-06        |     21                             |
+|     07-09        |     23.5                           |
+|     10-12        |     24                             |
+|     01-03        |     24.5                           |
+]
+
+- Por regresión lineal ¿Cuál será el número de peticiones para el próximo trimestre?
+- ¿El conjunto de racks soportará la carga del siguiente trimestre?
+- ¿Hasta qué trimestre podrá aguantar la organización estos racks?
+
+
+---
+
+## Actividad 3.
+
+Realizar el clúster mediante K-means (método Mínimum Spanning Tree, MST) y dibuja el dendrograma asociado:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Individuo    |     Altura    |     Peso    |     Enfermedad    |     Presión    |
+|------------------|---------------|-------------|-------------------|----------------|
+|     A            |     180       |     90      |     Sí            |     1290       |
+|     B            |     164       |     80      |     No            |     3290       |
+|     C            |     156       |     85      |     No            |     1200       |
+|     D            |     172       |     70      |     No            |     2200       |
+]
+
+---
+
+## Actividad 4. 
+
+Se ha realizado una encuesta entre los suscriptores de una web y se ha obtenido la tabla siguiente. El 1 indica que el usuario juega a dicho juego y el 0, no. 
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     USER |     DOOM |     QUAKE |     HERETIC |
+|----------|----------|-----------|-------------|
+|     A    | 1        | 1         | 1           |
+|     B    | 0        | 1         | 1           |
+|     C    | 0        | 1         | 1           |
+|     D    | 1        | 0         | 0           |
+| E        | 1        | 0         | 0           |
+]
+
+- Realiza el agrupamiento/clúster con k-means hasta obtener un único grupo 
+- Dibuja el dendrograma resultante 
+- ¿Qué interpretación haces de estos centroides?
+
+
+
+---
+
+background-color: #eeeeee
+class: center, middle
+
+# - Fin de la séptima sesión  -
+
+<a href="">
+  <svg id="face" class="svg-icon" viewBox="0 0 20 20" height="35" width="35" alt="Siguiente Tema">
+    <path fill="#aaaaaa" d="M8.652,16.404c-0.186,0-0.337,0.151-0.337,0.337v2.022c0,0.186,0.151,0.337,0.337,0.337s0.337-0.151,0.337-0.337v-2.022C8.989,16.555,8.838,16.404,8.652,16.404z"></path>
+    <path fill="#aaaaaa" d="M11.348,16.404c-0.186,0-0.337,0.151-0.337,0.337v2.022c0,0.186,0.151,0.337,0.337,0.337s0.337-0.151,0.337-0.337v-2.022C11.685,16.555,11.535,16.404,11.348,16.404z"></path>
+    <path fill="#aaaaaa" d="M17.415,5.281V4.607c0-2.224-1.847-4.045-4.103-4.045H10H6.687c-2.256,0-4.103,1.82-4.103,4.045v0.674H10H17.415z"></path>
+    <path fill="#aaaaaa" d="M18.089,10.674V7.304c0,0,0-0.674-0.674-0.674V5.955H10H2.585v0.674c-0.674,0-0.674,0.674-0.674,0.674v3.371c-0.855,0.379-1.348,1.084-1.348,2.022c0,1.253,2.009,3.008,2.009,3.371c0,2.022,1.398,3.371,3.436,3.371c0.746,0,1.43-0.236,1.98-0.627c-0.001-0.016-0.009-0.03-0.009-0.047v-2.022c0-0.372,0.303-0.674,0.674-0.674c0.301,0,0.547,0.201,0.633,0.474h0.041v-0.137c0-0.372,0.303-0.674,0.674-0.674s0.674,0.302,0.674,0.674v0.137h0.041c0.086-0.273,0.332-0.474,0.633-0.474c0.371,0,0.674,0.302,0.674,0.674v2.022c0,0.016-0.008,0.03-0.009,0.047c0.55,0.391,1.234,0.627,1.98,0.627c2.039,0,3.436-1.348,3.436-3.371c0-0.362,2.009-2.118,2.009-3.371C19.438,11.758,18.944,11.053,18.089,10.674z M5.618,18.089c-0.558,0-1.011-0.453-1.011-1.011s0.453-1.011,1.011-1.011s1.011,0.453,1.011,1.011S6.177,18.089,5.618,18.089z M6.629,13.371H5.474c-0.112,0-0.192-0.061-0.192-0.135c0-0.074,0.08-0.151,0.192-0.174l1.156-0.365V13.371z M8.652,12.521c-0.394,0.163-0.774,0.366-1.148,0.55c-0.061,0.03-0.132,0.052-0.2,0.076v-0.934c0.479-0.411,0.906-0.694,1.348-0.879V12.521z M5.281,10c-1.348,0-1.348-2.696-1.348-2.696h5.393C9.326,7.304,6.629,10,5.281,10z M10.674,12.296c-0.22-0.053-0.444-0.084-0.674-0.084s-0.454,0.032-0.674,0.084v-1.168C9.539,11.086,9.762,11.06,10,11.05c0.238,0.01,0.461,0.036,0.674,0.078V12.296z M12.696,13.146c-0.068-0.024-0.14-0.046-0.2-0.076c-0.374-0.184-0.754-0.386-1.148-0.55v-1.188c0.442,0.185,0.87,0.467,1.348,0.879V13.146zM14.382,18.089c-0.558,0-1.011-0.453-1.011-1.011s0.453-1.011,1.011-1.011c0.558,0,1.011,0.453,1.011,1.011S14.94,18.089,14.382,18.089z M13.371,13.371v-0.674l1.156,0.365c0.112,0.022,0.192,0.099,0.192,0.174c0,0.074-0.08,0.135-0.192,0.135H13.371z M14.719,10c-1.348,0-4.045-2.696-4.045-2.696h5.393C16.067,7.304,16.067,10,14.719,10z"></path>
+    <path fill="#aaaaaa" d="M10,16.067c-0.186,0-0.337,0.151-0.337,0.337V19.1c0,0.186,0.151,0.337,0.337,0.337s0.337-0.151,0.337-0.337v-2.696C10.337,16.218,10.186,16.067,10,16.067z"></path>
+  </svg>
+  </a>
+
+    </textarea>
+    
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+
+    <!-- option: katex -->
+    <script src="https://unpkg.com/katex/dist/katex.min.js"></script>
+    <script src="https://unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/katex/dist/katex.min.css" />
+
+    <script>
+    const slideshow = remark.create({
+      highlightStyle: "github", // highlight.js theme
+    }, () => {
+      // KaTeX sessting
+      renderMathInElement(document.body, {delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+      ]});
+    });
+    </script>
+
+
+
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

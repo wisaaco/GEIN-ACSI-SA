@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACSI - AS5</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+ /* file saved to local directory */
+    @import url("gh-fork-ribbon.css");
+    /* alternatively fetch from cdnjs */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css");
+
+
+
+    @import url("http://yui.yahooapis.com/pure/0.6.0/pure-min.css");
+    
+      .smaller-font { font-size:14px } 
+    
+
+
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      div.my-header {
+        background-color: #000000;
+        /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#606550), color-stop(0%,#409494), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#b3fbb3), color-stop(100%,#008c2e));*/
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 22px;
+        width: 100%;
+        text-align: left;
+      }
+      div.my-header span{
+        color: white;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 16px;
+
+      }
+      div.my-footer {
+        /*border-top: 1px solid #ccc;*/
+        font-size: 8pt;
+        text-align: left;
+        position: fixed;
+        bottom: 0px;
+        left: 10px;
+        /*height: 30px;*/
+        /*width: 100%;*/
+      }
+
+      div.my-footer p {
+      /*    margin-top: 10px;
+          height: 30px;*/
+          margin-bottom: 0px;
+      }
+      div.my-footer img {
+        vertical-align:middle;
+      }
+
+      img.alt {
+        width: 100px;
+      }
+
+      .cols {
+        display: flex;
+      }
+      
+      .fifty {
+        flex: 50%;
+        margin-left: 10px
+      }
+
+      .work{
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        margin-right: -5px;
+      }
+
+          span.red {
+        color: hsl(355deg 98% 40%);
+        right: -25%;
+        position: relative;
+      }
+
+     #colorani path{
+        animation: mycolor 4s;
+        /*animation-iteration-count: infinite;*/
+      }
+        @keyframes mycolor {
+          0% { fill:#ffff4d; }
+          10% { fill:#e6e600; }
+          20% { fill:#cccc00; }
+          30% { fill:#b3b300; }
+          40% { fill:#999900; }
+          50% { fill:#808000; }
+          60% { fill:#666600; }
+          70% { fill:#4d4d00; }
+          80% { fill:#333300; }
+          90% { fill:#1a1a00; }
+          100% { fill:#000000; }
+        }
+
+
+
+        a:before,
+        a:after, #face {
+          animation: glow-grow 8s ease-out;
+        }
+
+        @keyframes glow-grow {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          80% {
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1.);
+            opacity: 1;
+          }
+        }
+
+          .var {
+                font-family: 'Dosis';
+                font-weight: normal;
+          }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+
+            .pure-table {
+       border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show;
+          border: 0px solid #cbcbcb;
+      }
+    </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+ <div class="my-header">
+
+    <svg height="15" width="18" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; margin-left:4px;" role="img"><title>Sesiones prácticas</title>
+    <span>Quinta Sesión</span>
+
+ 
+    <a href="mailto:isaac.lera@uib.es" style="float: right; margin-right: 10px;">
+    <svg class="svg-icon" viewBox="0 0 20 20" height="18" width="20" style="fill: #ffffff;" alt="Email me" >
+              <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
+            </svg>
+     </a>       
+
+    <a href="https://github.com/wisaaco/GEIN-ACSI-SA" style="float: right; margin-right: 5px;">
+        <svg height="15" width="15" style="fill: #ffffff;" alt="Github" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+    </a>
+ </div>
+ <div class="my-footer">
+    <p> 2021 - Isaac Lera - CC BY license </p>
+ </div>
+
+---
+class: center, middle
+
+### ACSI
+# Quinta sesión práctica 
+
+### por Isaac Lera 
+---
+
+# Análisis operacional. Límites asintóticos
+
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 1. 
+
+Para el siguiente modelo cerrado servidor central con un tiempo de reflexión de 10s y 3 terminales, se pide: 
+- el tiempo medio de respuesta del sistema
+- la productividad global 
+
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Dispositivo    |     Servicio   (s)    |     Visitas    |
+|--------------------|-----------------------|----------------|
+|     A              |     10                |     4          |
+|     B              |     8                 |     2          |
+|     C              |     6                 |     1          |
+]
+
+
+---
+
+## Actividad 2. 
+
+De cara a la adquisición de un sistema, hay alguna razón para decantarse por alguno de estos tres sistemas:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|      | System1 | System2 | System3 |
+|------|---------|---------|---------|
+| Dmax | 4.6s    | 5.1s    | 3.1s    |
+| D    | 8.6     | 7.0     | 5.0     |
+| Z    | 60min   | 60min   | 60min   |
+]
+
+---
+
+## Actividad 3.
+
+Para el siguiente sistema, donde el tráfico de llegadas es de 360 trabajos/hora. Se pide:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+|     Dispositivo |    Service demand |
+|-----------------|-------------------|
+|     CPU1        |     4             |
+|     Disk1       |     0.8           |
+|     Disk2       |     0.5           |
+]
+
+Se pide:
+- La utilización de cada dispositivo
+- El dispositivo cuello de botella
+- El tiempo de respuesta medio de cada dispositivo
+- El tiempo de respuesta del sistema
+- El mejor tiempo de respuesta del sistema
+- La mejor productividad del sistema
+
+
+---
+
+## Actividad 4. (Problema 10.4)
+Dado el siguiente sistema con un tiempo medio entre llegadas de clientes de 0,6 segundos se pide:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+| Dispositivo | Visitas | Servicio (s) |
+|-------------|---------|----------|
+| CPU         | 17      | 0.03     |
+| Disk1       | 6       | 0.04     |
+| Disk2       | 10      | 0.04     |
+]
+
+- La tasa de llegadas al sistema. 
+- Las demandas de servicio de los dispositivos. 
+- El dispositivo cuello de botella.  
+- Las probabilidades de encaminamiento a los discos.
+- El tiempo mínimo de respuesta del sistema informático.
+- La productividad de los dispositivos del sistema. 
+- El valor máximo de la tasa de llegadas que soporta el sistema. 
+- El tiempo de respuesta de cada dispositivo.
+- El tiempo de respuesta del sistema informático. 
+- El número de trabajos que hay en el sistema.  
+
+---
+
+## Actividad 5. (Problema 10.5)
+Dado el siguiente sistema compuesto por 10 terminales y un tiempo medio de reflexión de 5 segundos se pide:
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+| Dispositivo | Visitas | Servicio (s) |
+|-------------|---------|----------|
+| CPU         | 11      | 0.02     |
+| Disk1       | 8       | 0.04     |
+| Disk2       | 2       | 0.1      |
+]
+
+- Las demandas de servicio de los dispositivos. 
+- El dispositivo cuello de botella.  
+- Las probabilidades de encaminamiento a los discos.
+- El tiempo mínimo de respuesta del sistema informático.
+- La productividad de los dispositivos del sistema. 
+- El valor del punto teórico de saturación
+- Las asíntotas optimistas del tiempo de respuesta y de la productividad del sistema
+- El tiempo medio de respuesta del sistema si se conoce que, por término medio, hay 8.107 trabajos en reflexión.
+
+
+---
+
+
+background-color: #eeeeee
+class: center, middle
+
+# - Fin de la quinta sesión  -
+
+
+
+<a href="SA6.html">
+  <svg id="face" class="svg-icon" viewBox="0 0 20 20" height="35" width="35" alt="Siguiente Tema">
+    <polygon fill="#aaaaaa" points="18.198,7.95 3.168,7.95 3.168,8.634 9.317,9.727 9.317,19.564 12.05,19.564 12.05,9.727 18.198,8.634 "></polygon>
+    <path fill="#aaaaaa" d="M2.485,10.057v-3.41H2.473l0.012-4.845h1.366c0.378,0,0.683-0.306,0.683-0.683c0-0.378-0.306-0.683-0.683-0.683H1.119c-0.378,0-0.683,0.306-0.683,0.683c0,0.378,0.306,0.683,0.683,0.683h0.683v4.845C1.406,6.788,1.119,7.163,1.119,7.609v2.733c0,0.566,0.459,1.025,1.025,1.025c0.053,0,0.105-0.008,0.157-0.016l-0.499,5.481l5.9,2.733h0.931C8.634,13.266,5.234,10.458,2.485,10.057z"></path>
+    <path fill="#aaaaaa" d="M18.169,6.584c-0.303-3.896-3.202-6.149-7.486-6.149c-4.282,0-7.183,2.252-7.484,6.149H18.169z M15.463,3.187c0.024,0.351-0.103,0.709-0.394,0.977c-0.535,0.495-1.405,0.495-1.94,0c-0.29-0.268-0.418-0.626-0.394-0.977C13.513,3.827,14.683,3.827,15.463,3.187z"></path>
+    <path fill="#aaaaaa" d="M18.887,10.056c-2.749,0.398-6.154,3.206-6.154,9.508h0.933l5.899-2.733L18.887,10.056z"></path>
+  </svg>
+  </a>
+
+
+    </textarea>
+    
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+
+    <!-- option: katex -->
+    <script src="https://unpkg.com/katex/dist/katex.min.js"></script>
+    <script src="https://unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/katex/dist/katex.min.css" />
+
+    <script>
+    const slideshow = remark.create({
+      highlightStyle: "github", // highlight.js theme
+    }, () => {
+      // KaTeX sessting
+      renderMathInElement(document.body, {delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+      ]});
+    });
+    </script>
+
+
+
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
