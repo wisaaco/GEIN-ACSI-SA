@@ -7,5 +7,7 @@ print(Sessions)
 ```
 
 [Grau d'Enginyeria Informàtica](https://estudis.uib.cat/estudis-de-grau/grau/informatica/GIN2-P/)
+
 Escola Politècnica Superior 
-by Isaac Lera 
+
+[Isaac Lera](https://www.uib.es/es/personal/ABTIxNTgx/) - License CC BY
