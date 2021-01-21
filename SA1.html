@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+    <title>ACSI - AS1</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+ /* file saved to local directory */
+    @import url("gh-fork-ribbon.css");
+    /* alternatively fetch from cdnjs */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css");
+
+
+
+    @import url("http://yui.yahooapis.com/pure/0.6.0/pure-min.css");
+    
+      .smaller-font { font-size:20px } 
+    
+
+
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      div.my-header {
+        background-color: #000000;
+        /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#606550), color-stop(0%,#409494), color-stop(0%,#ffffff), color-stop(10%,#ffffff), color-stop(25%,#b3fbb3), color-stop(100%,#008c2e));*/
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 22px;
+        width: 100%;
+        text-align: left;
+      }
+      div.my-header span{
+        color: white;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 16px;
+
+      }
+      div.my-footer {
+        /*border-top: 1px solid #ccc;*/
+        font-size: 8pt;
+        text-align: left;
+        position: fixed;
+        bottom: 0px;
+        left: 10px;
+        /*height: 30px;*/
+        /*width: 100%;*/
+      }
+
+      div.my-footer p {
+      /*    margin-top: 10px;
+          height: 30px;*/
+          margin-bottom: 0px;
+      }
+      div.my-footer img {
+        vertical-align:middle;
+      }
+
+      img.alt {
+        width: 100px;
+      }
+
+      .cols {
+        display: flex;
+      }
+      
+      .fifty {
+        flex: 50%;
+        margin-left: 10px
+      }
+
+      .work{
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        margin-right: -5px;
+      }
+
+      #colorani path{
+        animation: mycolor 4s;
+        /*animation-iteration-count: infinite;*/
+      }
+        @keyframes mycolor {
+          0% { fill:#ffff4d; }
+          10% { fill:#e6e600; }
+          20% { fill:#cccc00; }
+          30% { fill:#b3b300; }
+          40% { fill:#999900; }
+          50% { fill:#808000; }
+          60% { fill:#666600; }
+          70% { fill:#4d4d00; }
+          80% { fill:#333300; }
+          90% { fill:#1a1a00; }
+          100% { fill:#000000; }
+        }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .pure-table {
+       border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show;
+          border: 0px solid #cbcbcb;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+ <div class="my-header">
+
+    <svg height="15" width="18" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; margin-left:4px;" role="img"><title>Sesiones prácticas</title>
+    <span>Primera Sesión</span>
+
+ 
+    <a href="mailto:isaac.lera@uib.es" style="float: right; margin-right: 10px;">
+    <svg class="svg-icon" viewBox="0 0 20 20" height="18" width="20" style="fill: #ffffff;" alt="Email me" >
+              <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
+            </svg>
+     </a>       
+
+    <a href="https://github.com/wisaaco/GEIN-ACSI-SA" style="float: right; margin-right: 5px;">
+        <svg height="15" width="15" style="fill: #ffffff;" alt="Github" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+    </a>
+ </div>
+ <div class="my-footer">
+    <p> 2021 - Isaac Lera - CC BY license </p>
+ </div>
+
+---
+class: center, middle
+
+<img src="https://logo.uib.es/digitalAssets/338/338825_LOGO-UIB-VERTICAL_escalagrises72.png" alt="drawing" style="width:100px;"/>
+
+### Avaluació del Comportament de Sistemes Informàtics (ACSI)
+# Sesiones prácticas (Grupos Medios)
+
+### por Isaac Lera 
+---
+
+# Presentación de la asignatura
+
+
+Lunes, Martes - Grupos medios - Sesiones Proyecto & Prácticas
+
+Jueves - GG - Sesiones de Teoría
+
+--
+
+### ¡Vamos a intentar no desperdiciar esta primera sesión!
+
+---
+
+class: center, middle
+#¿Qué entendéis por Rendimiento? 
+##Brainstorming!
+
+---
+
+# ACSI - Primera sesión
+
+### ¿Cómo representar númericamente comparativas entre sistemas?
+
+- "Speed. Run workloads 100x faster" [Apache Spark](https://spark.apache.org/)
+
+- "¿Qué nos deja como rendimiento medio estos datos? Pues un contundente +30% de rendimiento medio frente a la RTX 2080 Ti y un sorprendente +50% frente a la RTX 2080 SUPER." [HardZone](https://hardzone.es/noticias/tarjetas-graficas/nvidia-rtx-3080-benchmark-fire-strike-time-spy/)
+
+- "NVMe Faster in Multi-tasking: 3.8x faster" [Storage Forum](https://www.enterprisestorageforum.com/storage-hardware/nvme-speed.html)
+
+---
+
+## ¿Cómo representar númericamente comparativas entre sistemas?
+
+- A) Podríamos sumar (y restar): 100ms "vs" 120ms = 120-100 = 20ms
+
+- B) Podríamos multiplicar (y dividir): 100ms "vs" 120ms = 120/100 = 1.2 (sin unidades!)
+
+### La interpretación:
+
+- A) 20ms más rápido
+- B) 20% más rápido
+
+La opción A es útil con test conocidos (test de coches "de 0 a 100")
+
+Las opción B incluye al sistema anterior (100%) Es también un **Indicador**. 
+
+---
+
+
+## Aceleración: la comparativa entre dos sistemas
+
+Se denomina **aceleración** (*speedup*) la comparativa entre dos sistemas. Es un escalar y un porcentaje. 
+
+.cols[
+.fifty[
+
+$$ S = \frac{T_a}{T_b}  $$
+
+$$ S = \frac{100}{120} = 0.833  $$
+
+$$ S = \frac{120}{100} = 1.2  $$
+
+El sistema *B* es 1.2 veces más rápido que *A*
+]
+
+.fifty[
+$$ S = | \frac{Lento-Rapido}{Lento} | =\%MasRapidoQue $$
+
+
+$$ S = | \frac{120-100}{100} | = \frac{20}{100} = 0.2 = 20\% $$
+
+El sistema *B* es 20%  más rápido que *A*
+]
+]
+
+
+```
+¡Atención! Es una simple división. La interpretación es lo más importante.
+
+Vale para cualquier unidad: tiempo, moneda, peso, etc.
+```
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 1. 
+### Calculo e interpretación de aceleraciones
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+| Sistema | Tiempo     | S(i,A) | S(i,A)% |
+|---------|------------|--------|---------|
+| A       |     120    | 1      | 0       |
+| B       |     20     | -      | -       |
+| C       |     830    | -      | -       |
+| D       |     240    | -      | -       |
+| E       |     100    | -      | -       |
+]
+
+```
+(i,A):- usamos el sistema A como referencia y sustituimos i por [B,C,D,E]
+```
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 2. 
+### Calculo e interpretación de aceleraciones
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+| Sistema | FPS        | S(i,A) | S(i,A)% |
+|---------|------------|--------|---------|
+| A       |     120    | 1      | 0       |
+| B       |     20     | -      | -       |
+| C       |     830    | -      | -       |
+| D       |     240    | -      | -       |
+| E       |     100    | -      | -       |
+]
+
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 3.
+### Calculo e interpretación de aceleraciones
+
+¿Qué opción representa un mejor ratio de FPS / Precio en...?
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+| NVIDIA    | FPS        | €      |
+|-----------|------------|--------|
+| RTX3090   |     57.8   | -      |
+| RTX3080   |     51.8   | -      |
+| RTX2080Ti |     38.2   | -      | 
+]
+
+
+[Cyberpunk2077](https://hardzone.es/noticias/juegos/rendimiento-cyberpunk-2077-nvidia-rtx-30/)
+
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 4.
+### Calculo e interpretación de aceleraciones
+
+Calculad los valores faltantes
+
+.pure-table.pure-table-bordered.pure-table-striped.smaller-font[
+| Sistema | Tiempo     | S(i,A) | S(i,A)% |
+|---------|------------|--------|---------|
+| A       |     120    | -      | -       |
+| B       |      -     | 0.6    | -       |
+| C       |      -     | -      | 1       |
+| D       |      -     | 3.4    | -       |
+| E       |      -     | -      | 2       |
+]
+
+
+---
+
+## Ley de Amdahl
+
+Fijaros que podríamos comparar un sistema con una versión suya mejorada:
+
+$$ S = \frac{T_a}{T_b}=\frac{Toriginal}{Tmejorado} $$
+
+
+$$ Tmejorado = Toriginal·(1-f)+\frac{Toriginal·f}{k} $$
+
+$$ S = \frac{1}{1-f+f/k} $$ 
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 5.
+### Aplicaciones de la Ley de Amdahl
+
+Un programa tarda 80s en realizar una consulta de disponibilidad hotelera. El 30% de ese tiempo se destina a conectarse con el proveedor, el resto del tiempo es el necesario para obtener información del sistema de almacenamiento.
+
+Los 80s son intolerables para la prestación correcta del servicio, y se toma la decisión de despedir al programador. Un programador competente mejora en 5 veces la consulta de obtención de información del sistema de almacenamiento. **(A) ¿Cuál es el nuevo tiempo?**
+
+
+Imaginemos que el proveedor ya tiene esa información cacheada y no es necesario acceder al sistema de almacenamiento. ** (B) ¿cuál sería el nuevo tiempo de ejecución en este caso? **
+
+** (C) ¿Cuánto tendría que mejorar la consulta al sistema de almacenamiento para obtener una aceleración de 3 y 5?**
+
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 6.
+### Aplicaciones de la Ley de Amdahl
+
+Un programa tarda 40 minutos en ejecutarse en un computador con un único procesador (p = 1). El 70% del tiempo de ejecución del programa es susceptible de ejecutarse en paralelo por varios procesadores (p >= 2). El 30% restante de este tiempo se divide en dos partes iguales: una corresponde a la componente puramente secuencial del programa y la otra se dedica a las operaciones de entrada/salida. Se pide calcular: 
+
+- A) La aceleración y el tiempo que se conseguirá si la unidad de entrada/salida se hace 400% más rápida.  
+- B) La aceleración máxima alcanzable por el programa suponiendo que se dispone de un número suficientemente grande de procesadores.  
+- C) El número de procesadores que son necesarios para conseguir una aceleración A = 2 en la ejecución del programa.  
+- D) La aceleración si mejoramos un 30% la parte paralelizable, un 300% la parte secuencial y un 100% las operaciones de entrada y salida.  
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 7.
+### Aplicaciones de la Ley de Amdahl
+
+Sintentizar el ADN de una muestra biológica requiere 3 días de ejecución, donde el 30% de ese tiempo se realizan operaciones flotantes y donde el 35%, se dedica a I/O.
+
+¿Qué opción compensa más?
+- A) Compilar el código en modo optimizado al kernel que reduce el número de instrucciones flotantes al 20%.*Note
+- B) Optimizar el HW reduciendo el tiempo de cada I/O de 4ns a 2.3ns.
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividad 8.
+### Aplicaciones de la Ley de Amdahl
+
+En una aplicación las operaciones sobre la memoria requieren del 40% del tiempo. 
+La invención de un sistema llamado *cache* acelera el 70% de las operaciones de memoria hasta cuatro veces más.
+Una nueva invección llamada *l2-cache* afecta al 30% restante por un factor de 2.
+
+**¿Cuál es la aceleración final?**
+
+---
+
+<img class="work" src="icons/bookmark-star-fill.svg" alt="TODO" width="100" height="100" title="Bookmark"/>
+
+## Actividades del libro.
+
+### Tema 1. 
+- Problema 1.11 (pág.31)
+- Problema 1.18 (pág.38)
+- Problema 1.9  (pág.29)
+
+
+---
+
+background-color: #eeeeee
+class: center, middle
+
+# - Fin de la primera sesión  -
+
+
+   <a href="SA2.html">
+        
+  <svg id="colorani" class="svg-icon" viewBox="0 0 20 20" height="35" width="35" alt="Siguiente Tema">
+              <path fill="#aaaaaa" d="M19.629,9.655c-0.021-0.589-0.088-1.165-0.21-1.723h-3.907V7.244h1.378V6.555h-2.756V5.866h2.067V5.177h-0.689V4.488h-1.378V3.799h0.689V3.11h-1.378V2.421h0.689V1.731V1.294C12.88,0.697,11.482,0.353,10,0.353c-5.212,0-9.446,4.135-9.629,9.302H19.629z M6.555,2.421c1.522,0,2.756,1.234,2.756,2.756S8.077,7.933,6.555,7.933S3.799,6.699,3.799,5.177S5.033,2.421,6.555,2.421z"></path>
+              <path fill="#aaaaaa" d="M12.067,18.958h-0.689v-0.689h2.067v-0.689h0.689V16.89h2.067v-0.689h0.689v-0.689h-1.378v-0.689h-2.067v-0.689h1.378v-0.689h2.756v-0.689h-1.378v-0.689h3.218c0.122-0.557,0.189-1.134,0.21-1.723H0.371c0.183,5.167,4.418,9.302,9.629,9.302c0.711,0,1.401-0.082,2.067-0.227V18.958z"></path>
+            </svg>
+  </a>
+
+
+    </textarea>
+    
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+
+    <!-- option: katex -->
+    <script src="https://unpkg.com/katex/dist/katex.min.js"></script>
+    <script src="https://unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/katex/dist/katex.min.css" />
+
+    <script>
+    const slideshow = remark.create({
+      highlightStyle: "github", // highlight.js theme
+    }, () => {
+      // KaTeX sessting
+      renderMathInElement(document.body, {delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+      ]});
+    });
+    </script>
+
+
+
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
